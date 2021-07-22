@@ -1,6 +1,6 @@
 # Building a .NET sample to send OMF to PI or OCS
 
-**Version**: 2.0.3
+**Version**: 2.0.4
 
 | OCS Test Status                                                                                                                                                                                                                                                                                                                                                    | EDS Test Status                                                                                                                                                                                                                                                                                                                                                    | PI Test Status                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -18,7 +18,7 @@ This sample also doesn't use any help to build the JSON strings for the OMF mess
 
 [OMF documentation](https://omf-docs.osisoft.com/)
 
-## To Run this Sample in Visual Studio:
+## To Run this Sample in Visual Studio
 
 1. Clone the GitHub repository
 2. Open the solution file in Microsoft Visual Studio, [OMF_API.sln](OMF_API.sln)
@@ -26,7 +26,7 @@ This sample also doesn't use any help to build the JSON strings for the OMF mess
 4. Update appsettings.json with the credentials for the enpoint(s) you want to send to. See [Configure endpoints and authentication](#configure-endpoints-and-authentication) below for additional details
 5. Click **Debug** > **Start Debugging** (or F5)
 
-## To Test this Sample in Visual Studio:
+## To Test this Sample in Visual Studio
 
 1. Follow steps 1-4 from the section above
 2. Click **Test** > **Run All Tests** (or Ctrl+R, A)

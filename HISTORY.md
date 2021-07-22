@@ -1,5 +1,10 @@
 # Version History
 
+## 2.0.4 / 2021-07-22
+
+- Standardized code style rules
+- Refactory sample to follow code styles
+
 ## 2.0.3 / 2021-07-20
 
 - Cleaned up gitignore

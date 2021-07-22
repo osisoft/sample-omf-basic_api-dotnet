@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace OMF_API
+namespace OMFAPI
 {
-    public class AppSettings
-    {
-        /// <summary>
-        /// The list of endpoints to connect and send to
-        /// </summary>
-        public IList<Endpoint> Endpoints { get; set; }
-    }
-
     public class Endpoint
     {
         /// <summary>
@@ -90,22 +81,22 @@ namespace OMF_API
         {
             get
             {
-                string BaseEndpoint = "";
+                string baseEndpoint = string.Empty;
 
-                if (string.Equals(this.EndpointType, "OCS", StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(EndpointType, "OCS", StringComparison.OrdinalIgnoreCase))
                 {
-                    BaseEndpoint = $"{this.Resource}/api/{this.ApiVersion}/tenants/{this.Tenant}/namespaces/{this.NamespaceName}";
+                    baseEndpoint = $"{Resource}/api/{ApiVersion}/tenants/{Tenant}/namespaces/{NamespaceName}";
                 }
-                else if (string.Equals(this.EndpointType, "EDS", StringComparison.OrdinalIgnoreCase))
+                else if (string.Equals(EndpointType, "EDS", StringComparison.OrdinalIgnoreCase))
                 {
-                    BaseEndpoint = $"{this.Resource}/api/{this.ApiVersion}/tenants/default/namespaces/default";
+                    baseEndpoint = $"{Resource}/api/{ApiVersion}/tenants/default/namespaces/default";
                 }
-                else if (string.Equals(this.EndpointType, "PI", StringComparison.OrdinalIgnoreCase))
+                else if (string.Equals(EndpointType, "PI", StringComparison.OrdinalIgnoreCase))
                 {
-                    BaseEndpoint = this.Resource;
+                    baseEndpoint = Resource;
                 }
 
-                return BaseEndpoint;
+                return baseEndpoint;
             }
         }
 
@@ -114,7 +105,7 @@ namespace OMF_API
         /// </summary>
         public string OmfEndpoint
         {
-            get { return $"{this.BaseEndpoint}/omf"; }
+            get { return $"{BaseEndpoint}/omf"; }
         }
     }
 }
